@@ -116,6 +116,46 @@ button{font:inherit}
 .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;z-index:60;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.on{opacity:1}
 
+/* language button, Tabby logo */
+.langbtn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:14px;font-weight:600;border:1px solid var(--line);padding:6px 10px}
+.langbtn:hover{border-color:var(--brand);color:var(--brand)}
+.tabby-line{display:inline-flex;align-items:center;gap:6px}
+.tabby-line img{height:18px;width:auto;background:#3bffc1;border-radius:4px;padding:2px 5px;box-sizing:content-box}
+.bnpl img{height:22px;width:auto;flex:none}
+.muted{color:var(--soft);font-size:13px;margin-top:10px}
+.cathead small{font-size:15px;color:var(--soft)}
+.agri small,.ship small{color:var(--soft)}
+.also-h{font-weight:600;margin:18px 0 8px}
+.desc h2{color:var(--brand);margin:0 0 8px}
+.atc svg{vertical-align:-5px}
+.cartlink{display:inline-flex}
+
+/* mobile drawer (same pattern as the live theme's ☰ menu) */
+.burger{display:none;border:0;background:none;padding:6px;cursor:pointer;color:var(--ink)}
+.scrim{position:fixed;inset:0;background:rgba(20,35,26,.45);z-index:70}
+.drawer{position:fixed;top:0;bottom:0;inset-inline-start:0;width:min(86vw,360px);background:#fff;z-index:80;display:flex;flex-direction:column;box-shadow:0 0 30px rgba(0,0,0,.2)}
+.drawer[hidden],.scrim[hidden]{display:none}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.dclose{border:0;background:var(--tone);width:40px;height:40px;display:grid;place-items:center;cursor:pointer;border-radius:50%}
+.dlinks{flex:1;overflow-y:auto;padding:6px 0}
+.dlinks a{display:block;padding:14px 18px;font-size:17px;text-decoration:none;border-bottom:1px solid #f0f2ee}
+.dlinks a.on{background:var(--tone);color:var(--brand);font-weight:600}
+.dlinks a.dfinder{color:#fff;background:var(--brand);font-weight:700;margin:10px 14px;border:0}
+.dlinks a.dfinder.on{background:var(--brand-d);color:#fff}
+.dlinks a.dfinder::before{content:"🌱 "}
+.dfoot{padding:14px 16px;display:grid;gap:10px;border-top:1px solid var(--line)}
+.dfoot .btn{text-align:center;display:flex;gap:8px;justify-content:center;align-items:center}
+body.noscroll{overflow:hidden}
+
+/* payment and shipping logos (shown by Zid's theme footer from store settings) */
+.paybar{border-top:1px solid var(--line);background:#fff;padding:18px 0}
+.paybar .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:center;align-items:center}
+.pgroup{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+.pgroup b{font-size:13px;font-weight:600;color:var(--soft)}
+.lgs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.lg{width:62px;height:40px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px 6px;overflow:hidden;flex:none}
+.lg img{width:100%;height:100%;object-fit:contain;display:block}
+
 /* footer */
 .ftr{background:var(--ink);color:#d7e0da;font-size:14px;margin-top:20px}
 .ftr .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px;padding:30px 16px}
@@ -127,8 +167,11 @@ button{font:inherit}
   .iwt,.iwt.rev,.pdp,.cart{grid-template-columns:1fr}.iwt img{height:260px}.iwt.rev img{order:0}
   .cards{grid-template-columns:repeat(2,1fr)}.plist{grid-template-columns:repeat(2,1fr)}
   .gal{grid-template-columns:repeat(3,1fr)}.revs{grid-template-columns:1fr}.ftr .wrap{grid-template-columns:1fr 1fr}
-  .hdr .row{flex-wrap:wrap}.search{order:3;max-width:none;flex-basis:100%}
-  .menu .wrap{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap}
+  .hdr .row{flex-wrap:wrap;gap:10px 12px}.search{order:3;max-width:none;flex-basis:100%}
+  .menu{display:none}
+  .burger{display:inline-flex}
+  .langbtn span{font-size:13px}
+  .strip{gap:6px 16px;font-size:13px}
   .also{grid-template-columns:repeat(2,1fr)}
   .sticky-atc{display:flex;position:fixed;bottom:0;inset-inline:0;z-index:35;background:#fff;border-top:1px solid var(--line);padding:10px 12px;gap:10px;align-items:center}
   .sticky-atc .atc{margin:0;flex:1}
